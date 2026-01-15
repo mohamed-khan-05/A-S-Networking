@@ -4,14 +4,25 @@
     0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); }
   }
+
+  
+  /* Pause the animation when hovering so users can read */
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
   
   .animate-marquee {
     display: flex;
     width: max-content;
-    animation: marquee 30s linear infinite;
+    /* Increased from 30s to 60s for a slower, professional crawl */
+    animation: marquee 60s linear infinite;
   }
   
-  /* Pause the animation when hovering so users can read */
   .animate-marquee:hover {
     animation-play-state: paused;
   }
