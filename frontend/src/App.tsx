@@ -10,11 +10,12 @@ import ServicesProducts from './pages/ServicesProducts';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact'; 
 import Footer from './components/layout/Footer';
+import ClientBanner from './components/pages/ClientBanner';
 
 const Home = () => (
   <>
     <Services />
-
+<ClientBanner/>
   </>
 );
 
