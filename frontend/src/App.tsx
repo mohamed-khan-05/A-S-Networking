@@ -1,14 +1,43 @@
-import React from 'react'
-import Navbar from './components/layout/Navbar'
-import Services from './components/pages/Services'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const App = () => {
+// Components
+import Navbar from './components/layout/Navbar';
+import Services from './components/pages/Services';
+
+// Pages
+import ServicesProducts from './pages/ServicesProducts';
+import Testimonials from './pages/Testimonials';
+import Contact from './pages/Contact'; 
+import Footer from './components/layout/Footer';
+
+const Home = () => (
+  <>
+    <Services />
+
+  </>
+);
+
+const App: React.FC = () => {
   return (
-    <div>
-      <Navbar/>
-      <Services/>
-    </div>
-  )
-}
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Navbar />
 
-export default App
+        <Routes>
+          {/* The Home route renders the main landing page components */}
+          <Route path="/" element={<Home />} />
+          
+          {/* These routes switch to their specific pages */}
+          <Route path="/services" element={<ServicesProducts />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
+        <Footer/>
+      </div>
+    </Router>
+  );
+};
+
+export default App;

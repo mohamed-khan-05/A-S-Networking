@@ -1,64 +1,70 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Home, Services, and Testimonials in the center
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'Projects', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Home', path: '/' },
+    { name: 'Services & Products', path: '/services' },
+    { name: 'Testimonials', path: '/testimonials' },
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md">
+    <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           
-          {/* Brand Logo */}
+          {/* Logo on the Left */}
           <div className="flex flex-shrink-0 items-center">
-            <span className="text-2xl font-extrabold tracking-tight text-gray-900">
-              PRO<span className="text-blue-600">FOLIO</span>
-            </span>
+            <Link to="/">
+              <img 
+                src="/assets/images/Logo.jpg" 
+                alt="Company Logo" 
+                className="h-10 w-auto object-contain" 
+              />
+            </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Center Navigation Links */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="flex items-center space-x-10">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
-                  className="group relative px-1 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-blue-600"
+                  to={link.path}
+                  className="group relative py-2 text-sm font-semibold text-gray-600 transition-colors hover:text-sky-500"
                 >
                   {link.name}
-                  {/* Underline Hover Animation */}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-blue-600 transition-transform duration-300 group-hover:scale-x-100"></span>
-                </a>
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 origin-left scale-x-0 bg-sky-500 transition-transform duration-300 group-hover:scale-x-100"></span>
+                </Link>
               ))}
             </div>
           </div>
 
-          {/* CTA Button */}
+          {/* Contact Button on the Right */}
           <div className="hidden md:block">
-            <button className="rounded-full bg-gray-900 px-6 py-2 text-sm font-semibold text-white transition-all hover:bg-gray-800 hover:shadow-lg active:scale-95">
-              Hire Me
-            </button>
+            <Link
+              to="/contact"
+              className="rounded-lg bg-sky-500 px-7 py-2.5 text-sm font-bold text-white shadow-md shadow-sky-100 transition-all hover:bg-sky-600 hover:shadow-lg active:scale-95"
+            >
+              Contact Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:outline-none"
+              className="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100"
             >
-              <span className="sr-only">Open main menu</span>
               {isOpen ? (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
               )}
@@ -68,20 +74,27 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Panel */}
-      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden border-t border-gray-100 bg-white`}>
-        <div className="space-y-1 px-4 pb-3 pt-2">
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden border-t bg-white shadow-xl`}>
+        <div className="space-y-1 px-4 pb-6 pt-2">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
-              className="block rounded-md px-3 py-4 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+              to={link.path}
+              onClick={() => setIsOpen(false)}
+              className="block rounded-md px-3 py-4 text-lg font-medium text-gray-700 hover:bg-sky-50 hover:text-sky-500"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
-          <button className="mt-4 w-full rounded-xl bg-blue-600 py-3 text-center text-base font-bold text-white shadow-md">
-            Get Started
-          </button>
+          <div className="pt-4">
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block w-full rounded-xl bg-sky-500 py-4 text-center text-lg font-bold text-white"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
