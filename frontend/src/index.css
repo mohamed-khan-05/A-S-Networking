@@ -1,28 +1,34 @@
 @import "tailwindcss";
 
+/* --- 1. Animation for ClientBanner (Infinite Logo Loop) --- */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* --- 2. Animation for Contact Marquee (Text Loop) --- */
 @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0%);
   }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-  
-  /* Pause the animation when hovering so users can read */
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
+/* Base class for the Contact Marquee */
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
 
-  @keyframes marquee {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
-  }
-  
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    /* Increased from 30s to 60s for a slower, professional crawl */
-    animation: marquee 60s linear infinite;
-  }
-  
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
+/* THE FIX: Pauses the Contact Marquee when the OUTER div is hovered */
+.pause-container:hover .animate-marquee {
+  animation-play-state: paused;
+  cursor: pointer;
+}

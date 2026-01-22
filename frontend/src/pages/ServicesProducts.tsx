@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ServiceCard from "../components/pages/ServiceCard";
 
 const ServicesProducts = () => {
   return (
-    <div>ServicesProducts</div>
-  )
-}
+    <div>
+      <ServiceCard />
+    </div>
+  );
+};
 
-export default ServicesProducts
+export default ServicesProducts;

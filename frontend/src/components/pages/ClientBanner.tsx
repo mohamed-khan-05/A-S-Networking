@@ -1,26 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
 const ClientBanner = () => {
-  const [isPaused, setIsPaused] = useState(false);
-
-  // Client logos data
   const clients = [
-    { name: "Cisco", color: "text-blue-700", bg: "bg-blue-50" },
-    { name: "IBM", color: "text-blue-800", bg: "bg-slate-50" },
-    { name: "Microsoft", color: "text-blue-600", bg: "bg-blue-50" },
-    { name: "Amazon", color: "text-slate-700", bg: "bg-slate-50" },
-    { name: "Google", color: "text-blue-500", bg: "bg-blue-50" },
-    { name: "Oracle", color: "text-red-700", bg: "bg-red-50" },
-    { name: "VMware", color: "text-blue-600", bg: "bg-slate-50" },
-    { name: "Dell", color: "text-blue-400", bg: "bg-blue-50" },
+    { name: "Cisco", logo: "NTT Data.png" },
+    { name: "Outworx", logo: "Outworx.png" },
+    { name: "PWC", logo: "PWC.png" },
+    { name: "rewardsco", logo: "rewardsco.png" },
+    { name: "Moses Mabhida Stadium", logo: "Moses Mabhida Stadium.png" },
   ];
 
+  // TRICK 1: Double the array (exactly twice)
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="relative py-12 bg-white overflow-hidden border-y border-gray-100">
+    <section className="relative py-20 bg-white overflow-hidden border-y border-gray-100">
       {/* Background Grid */}
-      <div className="absolute inset-0 pointer-events-none opacity-40">
+      <div className="absolute inset-0 pointer-events-none opacity-30">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern
@@ -42,44 +37,35 @@ const ClientBanner = () => {
       </div>
 
       <div className="relative w-full">
-        <div className="text-center mb-8">
-          <h2 className="text-blue-600 font-bold tracking-widest uppercase text-sm">
-            Our Global Partners
+        <div className="text-center mb-12">
+          <h2 className="text-blue-600 font-bold tracking-[0.2em] uppercase text-xs mb-2">
+            Trusted by Industry Leaders
           </h2>
+          <div className="h-1 w-12 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
-        {/* FADE OVERLAYS REMOVED FROM HERE
-         */}
+        {/* Fades to hide the "edge" where logos appear/disappear */}
+        <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-white to-transparent z-10"></div>
 
-        <div className="flex w-full">
+        <div className="flex overflow-hidden">
           <div
-            className="flex items-center space-x-12 py-4"
+            className="flex items-center"
             style={{
-              animation: !isPaused ? "scroll 30s linear infinite" : "none",
+              /* Uses 'scroll' animation; no pause logic attached */
+              animation: "scroll 30s linear infinite",
               display: "flex",
-              whiteSpace: "nowrap",
+              width: "max-content",
             }}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
           >
             {duplicatedClients.map((client, index) => (
-              <div key={index} className="flex-shrink-0">
-                <div
-                  className={`
-                    px-10 py-6 rounded-2xl
-                    ${client.bg}
-                    border border-gray-100
-                    shadow-sm hover:shadow-md
-                    transition-all duration-300
-                    flex items-center justify-center
-                    group cursor-pointer
-                  `}
-                >
-                  <span
-                    className={`text-xl font-extrabold ${client.color} opacity-70 group-hover:opacity-100 transition-opacity`}
-                  >
-                    {client.name}
-                  </span>
+              <div key={index} className="flex-shrink-0 px-8">
+                <div className="w-56 h-28 bg-white border border-gray-100/80 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-xl flex items-center justify-center group">
+                  <img
+                    src={`/assets/images/Client Logos/${client.logo}`}
+                    alt={`${client.name} logo`}
+                    className="max-h-16 w-40 object-contain transition-all duration-500 scale-105"
+                  />
                 </div>
               </div>
             ))}
