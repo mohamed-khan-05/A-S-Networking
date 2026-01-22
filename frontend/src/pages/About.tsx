@@ -24,7 +24,7 @@ import {
   Network,
 } from "lucide-react";
 
-const Testimonials = () => {
+const About = () => {
   const darkBlue = "#002970"; // Deep navy
   const brightBlue = "#004FCB"; // Bright blue
   const lightBg = "#f0f6ff"; // Light blue background
@@ -84,7 +84,7 @@ const Testimonials = () => {
   ];
 
   const stats = [
-    { icon: <Clock />, value: "15+ Years", label: "Local Market Experience" },
+    { icon: <Clock />, value: "25+ Years", label: "Local Market Experience" },
     { icon: <Users />, value: "100%", label: "Client Retention Rate" },
     { icon: <Repeat />, value: "Majority", label: "Repeat Projects" },
     { icon: <Award />, value: "Numerous", label: "Projects Delivered" },
@@ -362,7 +362,7 @@ const Testimonials = () => {
                 }}
               >
                 <p className="text-white font-bold text-lg text-center">
-                  Close to 15 years of local markets projects deployment
+                  Over 25 years of local markets projects deployment
                   experience
                 </p>
               </div>
@@ -633,48 +633,6 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Bottom CTA Banner */}
-        <div
-          className="rounded-3xl p-12 text-white shadow-2xl"
-          style={{
-            background: `linear-gradient(135deg, ${darkBlue} 0%, ${mediumBlue} 50%, ${brightBlue} 100%)`,
-          }}
-        >
-          <div className="text-center mb-10">
-            <h3 className="text-4xl font-bold mb-4">Connect with Confidence</h3>
-            <p className="text-xl text-white/90">
-              Your trusted network infrastructure partner since 2009
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-5 max-w-5xl mx-auto">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center border border-white/30 hover:bg-white/20 hover:scale-105 transition-all duration-300"
-              >
-                <div className="mb-3 flex justify-center">
-                  <div className="bg-white/30 p-3 rounded-xl">
-                    {React.cloneElement(service.icon, {
-                      className: "w-8 h-8 text-white",
-                    })}
-                  </div>
-                </div>
-                <span className="font-medium text-white">{service.name}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-              <Zap className="w-8 h-8 text-white" />
-            </div>
-            <p className="text-xl text-white/90">
-              Ready to power your network infrastructure? Contact us today.
-            </p>
-          </div>
-        </div>
-
         {/* Services Footer */}
         <div
           className="mt-16 pt-12 border-t text-center"
@@ -707,7 +665,7 @@ const Testimonials = () => {
             style={{ borderColor: `${brightBlue}20` }}
           >
             <p className="text-sm" style={{ color: mediumBlue }}>
-              © {new Date().getFullYear()} A&S Networking. All rights reserved.
+              © {new Date().getFullYear()} A & S Networking. All rights reserved.
             </p>
           </div>
         </div>
@@ -716,4 +674,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default About;

@@ -6,16 +6,15 @@ import {
   useLocation,
 } from "react-router-dom";
 
-// Components
+// Layout
 import Navbar from "./components/layout/Navbar";
-import Services from "./components/pages/Services";
+import Footer from "./components/layout/Footer";
 
 // Pages
-import ServicesProducts from "./pages/ServicesProducts";
-import Testimonials from "./pages/Testimonials";
+import Services from "./pages/Services";
+import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Footer from "./components/layout/Footer";
-import ClientBanner from "./components/pages/ClientBanner";
+import Home from "./pages/Home";
 
 // Local utility component to handle scrolling
 const ScrollToTop = () => {
@@ -27,13 +26,6 @@ const ScrollToTop = () => {
 
   return null;
 };
-
-const Home = () => (
-  <>
-    <Services />
-    <ClientBanner />
-  </>
-);
 
 const App: React.FC = () => {
   return (
@@ -49,8 +41,8 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
 
           {/* These routes switch to their specific pages */}
-          <Route path="/services" element={<ServicesProducts />} />
-          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/testimonials" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 

@@ -1,7 +1,7 @@
 // components/Services.tsx
 import React, { useState, useEffect } from "react";
 
-const Services = () => {
+const HomeServices = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -93,12 +93,12 @@ const Services = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with Sliding Text */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center px-5 py-2.5 rounded-full bg-white border border-slate-200 mb-8 shadow-sm">
-            <div className="w-2 h-2 bg-[#004FCB] rounded-full mr-3 animate-pulse"></div>
-            <span className="text-xs font-black tracking-[0.2em] text-[#002970] uppercase">
-              FIBRE OPTIC SPECIALISTS
-            </span>
-          </div>
+        <div className="inline-flex items-center px-5 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
+              <div className="w-2 h-2 bg-[#004FCB] rounded-full mr-3 animate-pulse"></div>
+              <span className="text-xs font-black tracking-[0.2em] text-[#002970] uppercase">
+                Fibre Optic Specialists
+              </span>
+            </div>
 
           <div
             className="h-24 mb-8 overflow-hidden relative"
@@ -155,4 +155,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default HomeServices;

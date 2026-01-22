@@ -1,6 +1,6 @@
 import React from "react";
 
-const ClientBanner = () => {
+const HomeClientBanner = () => {
   const clients = [
     { name: "NTT Data", logo: "NTT Data.png" },
     { name: "Outworx", logo: "Outworx.png" },
@@ -79,4 +79,4 @@ const ClientBanner = () => {
   );
 };
 
-export default ClientBanner;
+export default HomeClientBanner;

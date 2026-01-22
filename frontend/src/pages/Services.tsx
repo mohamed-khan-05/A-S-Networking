@@ -1,4 +1,3 @@
-// components/pages/ServiceCard.tsx
 import React from "react";
 import {
   Wifi,
@@ -25,7 +24,7 @@ interface ServiceItem {
   icon: React.ReactNode;
 }
 
-const ServiceCard: React.FC = () => {
+const Services: React.FC = () => {
   const services: ServiceItem[] = [
     {
       id: 1,
@@ -106,11 +105,13 @@ const ServiceCard: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-2 bg-[#002970]/10 rounded-full mb-6">
-            <span className="text-[#004FCB] font-semibold text-sm">
-              NETWORKING SOLUTIONS
-            </span>
-          </div>
+          {/* badge */}
+        <div className="inline-flex items-center px-5 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
+              <div className="w-2 h-2 bg-[#004FCB] rounded-full mr-3 animate-pulse"></div>
+              <span className="text-xs font-black tracking-[0.2em] text-[#002970] uppercase">
+                Networking Solutions
+              </span>
+            </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#002970]">
             Professional <span className="text-[#004FCB]">Networking</span>{" "}
@@ -137,10 +138,6 @@ const ServiceCard: React.FC = () => {
             ))}
           </div>
 
-          <button className="px-8 py-4 bg-[#004FCB] text-white font-bold rounded-xl hover:bg-[#002970] transition-all duration-300 transform hover:scale-105 shadow-lg">
-            Schedule a Consultation
-            <ChevronRight className="inline-block ml-2 w-5 h-5" />
-          </button>
         </div>
 
         {/* Services Grid */}
@@ -183,45 +180,6 @@ const ServiceCard: React.FC = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Stats Section */}
-        <div className="mb-16 bg-gradient-to-r from-[#002970] to-[#004FCB] rounded-2xl p-8 md:p-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">99.9%</div>
-              <div className="text-white/90">Uptime Guarantee</div>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">500+</div>
-              <div className="text-white/90">Projects Completed</div>
-            </div>
-            <div className="text-center text-white">
-              <div className="text-4xl font-bold mb-2">24/7</div>
-              <div className="text-white/90">Support Available</div>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-[#002970]/5 to-[#004FCB]/5 rounded-2xl p-8 md:p-12 text-center border border-gray-100">
-          <h3 className="text-2xl md:text-3xl font-bold text-[#002970] mb-4">
-            Ready to Elevate Your Network Infrastructure?
-          </h3>
-          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-            Contact our expert team for a comprehensive network assessment and
-            customized solution tailored to your business needs.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-[#004FCB] text-white font-bold rounded-xl hover:bg-[#002970] transition-all duration-300 shadow-lg">
-              <Phone className="inline-block mr-2 w-4 h-4" />
-              Get Free Assessment
-            </button>
-            <button className="px-8 py-3 bg-white text-[#004FCB] font-bold rounded-xl border-2 border-[#004FCB] hover:bg-[#004FCB] hover:text-white transition-all duration-300">
-              View Case Studies
-            </button>
           </div>
         </div>
 
@@ -268,4 +226,4 @@ const ServiceCard: React.FC = () => {
   );
 };
 
-export default ServiceCard;
+export default Services;
