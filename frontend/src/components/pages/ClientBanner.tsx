@@ -2,11 +2,14 @@ import React from "react";
 
 const ClientBanner = () => {
   const clients = [
-    { name: "Cisco", logo: "NTT Data.png" },
+    { name: "NTT Data", logo: "NTT Data.png" },
     { name: "Outworx", logo: "Outworx.png" },
-    { name: "PWC", logo: "PWC.png" },
-    { name: "rewardsco", logo: "rewardsco.png" },
+    { name: "PWC", logo: "pwc.png" },
+    { name: "rewardsco", logo: "Rewardsco.png" },
     { name: "Moses Mabhida Stadium", logo: "Moses Mabhida Stadium.png" },
+    { name: "AlexForbes", logo: "alexforbes.png" },
+    { name: "Standard Bank", logo: "Standard Bank.png" },
+    { name: "Mr Price", logo: "Mr Price.png" },
   ];
 
   // TRICK 1: Double the array (exactly twice)
