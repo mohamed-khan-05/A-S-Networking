@@ -7,7 +7,7 @@ on:
 
 jobs:
   git-mirror:
-    if: github.repository == 'YOUR_USERNAME/YOUR_REPO_NAME'
+    if: github.repository == 'mohamed-khan-05/A-S-Networking'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
