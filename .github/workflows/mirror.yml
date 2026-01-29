@@ -7,6 +7,7 @@ on:
 
 jobs:
   git-mirror:
+    if: github.repository == 'YOUR_USERNAME/YOUR_REPO_NAME'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -20,7 +21,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
           
-          # We use the token directly in the URL here
+          # Force the use of the token for the destination
           git remote add mirror "https://SohailSomnath:${{ secrets.GIT_SYNC_TOKEN }}@github.com/SohailSomnath/A-S-Networking.git"
           
           git push mirror --all --force
