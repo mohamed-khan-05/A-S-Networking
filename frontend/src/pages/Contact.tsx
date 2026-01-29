@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
               href="mailto:info@company.com"
               className="mt-6 text-[#004FCB] font-bold hover:text-[#002970] transition-colors"
             >
-              info@company.com
+              info@aandsnetworking.com
             </a>
           </div>
 
@@ -121,7 +121,7 @@ const Contact: React.FC = () => {
               href="tel:+11234567890"
               className="mt-6 text-[#004FCB] font-bold hover:text-[#002970] transition-colors"
             >
-              +1 (123) 456-7890
+              +27 83 293 9569
             </a>
           </div>
 

@@ -106,12 +106,12 @@ const Services: React.FC = () => {
         {/* Hero Section */}
         <div className="text-center mb-12">
           {/* badge */}
-        <div className="inline-flex items-center px-5 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
-              <div className="w-2 h-2 bg-[#004FCB] rounded-full mr-3 animate-pulse"></div>
-              <span className="text-xs font-black tracking-[0.2em] text-[#002970] uppercase">
-                Networking Solutions
-              </span>
-            </div>
+          <div className="inline-flex items-center px-5 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
+            <div className="w-2 h-2 bg-[#004FCB] rounded-full mr-3 animate-pulse"></div>
+            <span className="text-xs font-black tracking-[0.2em] text-[#002970] uppercase">
+              Networking Solutions
+            </span>
+          </div>
 
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-[#002970]">
             Professional <span className="text-[#004FCB]">Networking</span>{" "}
@@ -137,13 +137,14 @@ const Services: React.FC = () => {
               </div>
             ))}
           </div>
-
         </div>
 
         {/* Services Grid */}
         <div className="mb-16">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[#002970] mb-4">
+              <br />
+              <br />
               Our Comprehensive <span className="text-[#004FCB]">Services</span>
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-[#002970] to-[#004FCB] mx-auto mb-6"></div>
@@ -172,53 +173,8 @@ const Services: React.FC = () => {
                 <p className="text-gray-600 text-sm mb-4">
                   {service.description}
                 </p>
-
-                {/* Learn More */}
-                <div className="flex items-center gap-2 text-[#004FCB] text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  Learn more
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl">
-            <div className="p-3 rounded-lg bg-[#002970]/10">
-              <Award className="w-6 h-6 text-[#004FCB]" />
-            </div>
-            <div>
-              <div className="font-bold text-[#002970]">Certified Experts</div>
-              <div className="text-gray-600 text-sm">
-                Industry-certified professionals
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl">
-            <div className="p-3 rounded-lg bg-[#002970]/10">
-              <Clock className="w-6 h-6 text-[#004FCB]" />
-            </div>
-            <div>
-              <div className="font-bold text-[#002970]">Quick Response</div>
-              <div className="text-gray-600 text-sm">
-                2-hour emergency response
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl">
-            <div className="p-3 rounded-lg bg-[#002970]/10">
-              <ShieldCheck className="w-6 h-6 text-[#004FCB]" />
-            </div>
-            <div>
-              <div className="font-bold text-[#002970]">Quality Guarantee</div>
-              <div className="text-gray-600 text-sm">
-                5-year service warranty
-              </div>
-            </div>
           </div>
         </div>
       </div>

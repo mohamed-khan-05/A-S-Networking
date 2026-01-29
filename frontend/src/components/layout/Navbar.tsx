@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Services & Products", path: "/services" },
-    { name: "About", path: "/testimonials" },
+    { name: "About", path: "/about" },
   ];
 
   return (
@@ -94,9 +94,8 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu Panel */}
       <div
-        className={`${
-          isOpen ? "block" : "hidden"
-        } md:hidden border-t bg-white shadow-xl`}
+        className={`${isOpen ? "block" : "hidden"
+          } md:hidden border-t bg-white shadow-xl`}
       >
         <div className="space-y-1 px-4 pb-6 pt-2">
           {navLinks.map((link) => (

@@ -42,7 +42,7 @@ const App: React.FC = () => {
 
           {/* These routes switch to their specific pages */}
           <Route path="/services" element={<Services />} />
-          <Route path="/testimonials" element={<About />} />
+          <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 

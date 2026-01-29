@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/testimonials"
+                  to="/about"
                   className="hover:text-sky-400 transition-colors"
                 >
                   About
@@ -123,7 +123,7 @@ const Footer: React.FC = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>+1 (123) 456-7890</span>
+                <span>+27 83 293 9569</span>
               </li>
               <li className="flex items-center gap-3">
                 <svg
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>info@company.com</span>
+                <span>info@aandsnetworking.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <svg
@@ -156,9 +156,7 @@ const Footer: React.FC = () => {
                   />
                 </svg>
                 <span>
-                  Mon – Fri: 9AM – 5PM
-                  <br />
-                  Dispatch Available 24/7
+                  Mon – Fri: 9AM – 8PM
                 </span>
               </li>
             </ul>
@@ -168,17 +166,17 @@ const Footer: React.FC = () => {
         {/* Bottom Copyright Section */}
         <div className="mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-slate-500">
-            © {currentYear} A & S Networking. All rights reserved. Built for
+            © {currentYear} A&S Networking. All rights reserved. Built for
             connectivity.
           </p>
-          <div className="flex gap-6 text-xs text-slate-500">
+          {/* <div className="flex gap-6 text-xs text-slate-500">
             <button className="hover:text-white transition-colors">
               Privacy Policy
             </button>
             <button className="hover:text-white transition-colors">
               Terms of Service
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

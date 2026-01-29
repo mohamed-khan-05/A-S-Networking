@@ -57,7 +57,7 @@ const About = () => {
 
   const clients = [
     {
-      name: "STD BANK KINGSMEAD",
+      name: "STANDARD BANK KINGSMEAD",
       work: "5,000 network points, SystemX CAT6, Fibre and TEL backbone cables",
       logo: "🏦",
     },
@@ -67,7 +67,7 @@ const About = () => {
       logo: "🏟️",
     },
     {
-      name: "REWARDS CO",
+      name: "REWARDSCO",
       work: "6,000 Krone CAT6 points, 24 cabinets, Fibre, 150 WIFI",
       logo: "🎯",
     },
@@ -86,8 +86,8 @@ const About = () => {
   const stats = [
     { icon: <Clock />, value: "25+ Years", label: "Local Market Experience" },
     { icon: <Users />, value: "100%", label: "Client Retention Rate" },
-    { icon: <Repeat />, value: "Majority", label: "Repeat Projects" },
-    { icon: <Award />, value: "Numerous", label: "Projects Delivered" },
+    // { icon: <Repeat />, value: "Majority", label: "Repeat Projects" },
+    // { icon: <Award />, value: "Numerous", label: "Projects Delivered" },
   ];
 
   return (
@@ -117,7 +117,7 @@ const About = () => {
             <div className="inline-flex items-center px-5 py-2 rounded-full bg-slate-50 border border-slate-200 mb-8 shadow-sm">
               <div className="w-2 h-2 bg-[#004FCB] rounded-full mr-3 animate-pulse"></div>
               <span className="text-xs font-black tracking-[0.2em] text-[#002970] uppercase">
-                Established 2009
+                Established 2002
               </span>
             </div>
 
@@ -529,10 +529,10 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="flex justify-center">
             {/* Client List Card */}
             <div
-              className="bg-white rounded-3xl shadow-xl p-10"
+              className="bg-white rounded-3xl shadow-xl p-10 max-w-3xl"
               style={{
                 boxShadow: `0 10px 40px rgba(0, 47, 112, 0.1)`,
               }}
@@ -583,90 +583,6 @@ const About = () => {
                 ))}
               </div>
             </div>
-
-            {/* Repeat Business Card */}
-            <div
-              className="rounded-3xl shadow-xl p-10"
-              style={{
-                background: `linear-gradient(135deg, ${lightBg}, white)`,
-                boxShadow: `0 10px 40px rgba(0, 47, 112, 0.1)`,
-                border: `2px solid ${brightBlue}20`,
-              }}
-            >
-              <div className="flex items-center mb-8">
-                <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mr-5 shadow-lg"
-                  style={{
-                    background: `linear-gradient(135deg, ${brightBlue}, ${darkBlue})`,
-                  }}
-                >
-                  <Repeat className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold" style={{ color: darkBlue }}>
-                  Repeat Business Success
-                </h3>
-              </div>
-              <p
-                className="text-lg mb-8 leading-relaxed"
-                style={{ color: mediumBlue }}
-              >
-                A partial list of companies that we delivered our Services to
-                demonstrates our capability to handle projects of varying
-                complexity and scale across diverse industries.
-              </p>
-              <div
-                className="bg-white rounded-2xl p-6 border shadow-sm"
-                style={{
-                  borderColor: `${brightBlue}30`,
-                }}
-              >
-                <p
-                  className="font-bold text-lg text-center"
-                  style={{ color: darkBlue }}
-                >
-                  We specialize in both large-scale corporate installations and
-                  specialized infrastructure projects with a focus on
-                  reliability and scalability.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Services Footer */}
-        <div
-          className="mt-16 pt-12 border-t text-center"
-          style={{ borderColor: `${brightBlue}30` }}
-        >
-          <p
-            className="text-lg uppercase tracking-widest font-bold mb-8"
-            style={{ color: brightBlue }}
-          >
-            Our Core Services
-          </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-center">
-                <div
-                  className="w-3 h-3 rounded-full mr-3 animate-pulse"
-                  style={{ backgroundColor: brightBlue }}
-                ></div>
-                <span
-                  className="text-lg font-semibold"
-                  style={{ color: darkBlue }}
-                >
-                  {service.name}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div
-            className="mt-10 pt-8 border-t"
-            style={{ borderColor: `${brightBlue}20` }}
-          >
-            <p className="text-sm" style={{ color: mediumBlue }}>
-              © {new Date().getFullYear()} A & S Networking. All rights reserved.
-            </p>
           </div>
         </div>
       </div>

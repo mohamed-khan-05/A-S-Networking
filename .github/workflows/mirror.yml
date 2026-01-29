@@ -1,0 +1,22 @@
+name: Mirror to Second Account
+
+on:
+  push:
+    branches:
+      - '*' 
+
+jobs:
+  git-mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Mirror to Second Repo
+        uses: wearerequired/git-mirror-action@v1
+        env:
+          DESTINATION_REPOSITORY_URL: "https://SohailSomnath:${{ secrets.GIT_SYNC_TOKEN }}@github.com/SohailSomnath/A-S-Networking.git"
+        with:
+          args: --force --prune
