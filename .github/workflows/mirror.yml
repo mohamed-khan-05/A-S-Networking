@@ -3,7 +3,7 @@ name: Mirror to Second Account
 on:
   push:
     branches:
-      - '*' 
+      - '*' # Triggers on any branch push
 
 jobs:
   git-mirror:
@@ -14,12 +14,15 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fix Dubious Ownership
-        run: git config --global --add safe.directory /github/workspace
-
-      - name: Mirror to Second Repo
-        uses: wearerequired/git-mirror-action@v1
-        env:
-          DESTINATION_REPOSITORY_URL: "https://SohailSomnath:${{ secrets.GIT_SYNC_TOKEN }}@github.com/SohailSomnath/A-S-Networking.git"
-        with:
-          args: --force --prune
+      - name: Push to Mirror
+        run: |
+          # 1. Set up your identity (standard Git practice)
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          
+          # 2. Add the second account as a remote
+          git remote add mirror "https://SohailSomnath:${{ secrets.GIT_SYNC_TOKEN }}@github.com/SohailSomnath/A-S-Networking.git"
+          
+          # 3. Push everything (all branches and all tags)
+          git push mirror --all --force
+          git push mirror --tags --force
