@@ -57,6 +57,16 @@ const About = () => {
 
   const clients = [
     {
+      name: "OUTWORX GROUP",
+      work: "Total installation of 2,400+ data points and fibre across Canegate, Sunbury, Ncondo Chambers, PE Libra, and Coastlands branches",
+      logo: "🏢",
+    },
+    {
+      name: "REWARDSCO",
+      work: "9,300+ total CAT6 points across Main Campus and Blocks A, B & C, 52 cabinets, Fibre backbone, 150 WIFI",
+      logo: "🎯",
+    },
+    {
       name: "STANDARD BANK KINGSMEAD",
       work: "5,000 network points, SystemX CAT6, Fibre and TEL backbone cables",
       logo: "🏦",
@@ -65,11 +75,6 @@ const About = () => {
       name: "MOSES MABIDA STADIUM",
       work: "2,500 network points, SystemX CAT6, 36 cabinets",
       logo: "🏟️",
-    },
-    {
-      name: "REWARDSCO",
-      work: "6,000 Krone CAT6 points, 24 cabinets, Fibre, 150 WIFI",
-      logo: "🎯",
     },
     {
       name: "MR PRICE HAMERSDALE",
