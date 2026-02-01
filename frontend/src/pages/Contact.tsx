@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
             </div>
             <h3 className="text-xl font-bold text-gray-900">Direct Line</h3>
             <p className="mt-3 text-center text-gray-500">
-              Speak with a project manager.
+              Anil Somnath
             </p>
             <a
               href="tel:+11234567890"
